@@ -1,0 +1,455 @@
+<!DOCTYPE html><html class="dark scroll-smooth" lang="vi" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Tễu Tạc - Chạm vào văn hóa Việt</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-highest": "#383529",
+                        "surface-container-lowest": "#100e06",
+                        "primary-fixed-dim": "#9cd2b5",
+                        "surface-tint": "#9cd2b5",
+                        "outline-variant": "#404943",
+                        "on-surface-variant": "#c0c9c1",
+                        "tertiary": "#ffb4ac",
+                        "outline": "#8a938c",
+                        "on-error": "#690005",
+                        "inverse-surface": "#e9e2d2",
+                        "on-tertiary-fixed": "#410003",
+                        "secondary-fixed": "#ffe088",
+                        "secondary-fixed-dim": "#e9c349",
+                        "secondary": "#e9c349",
+                        "on-tertiary": "#690007",
+                        "on-primary-container": "#77ac90",
+                        "inverse-on-surface": "#333025",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-high": "#2d2a1f",
+                        "on-secondary-fixed": "#241a00",
+                        "on-primary-fixed": "#002114",
+                        "on-secondary-container": "#342800",
+                        "error": "#ffb4ab",
+                        "on-secondary-fixed-variant": "#574500",
+                        "primary-container": "#06402b",
+                        "secondary-container": "#af8d11",
+                        "surface-container-low": "#1e1c12",
+                        "primary-fixed": "#b8efd0",
+                        "background": "#16130a",
+                        "primary": "#9cd2b5",
+                        "on-primary-fixed-variant": "#1b503a",
+                        "inverse-primary": "#356850",
+                        "on-tertiary-container": "#ff776c",
+                        "on-primary": "#003825",
+                        "tertiary-fixed": "#ffdad6",
+                        "surface": "#16130a",
+                        "on-tertiary-fixed-variant": "#92030f",
+                        "surface-variant": "#383529",
+                        "on-background": "#e9e2d2",
+                        "surface-bright": "#3c392e",
+                        "on-secondary": "#3c2f00",
+                        "error-container": "#93000a",
+                        "tertiary-container": "#760009",
+                        "tertiary-fixed-dim": "#ffb4ac",
+                        "surface-dim": "#16130a",
+                        "on-surface": "#e9e2d2",
+                        "surface-container": "#222015",
+                        "deep-red": "#B22222",
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.125rem",
+                        lg: "0.25rem",
+                        xl: "0.5rem",
+                        full: "0.75rem"
+                    },
+                    spacing: {
+                        base: "8px",
+                        gutter: "24px",
+                        "margin-desktop": "64px",
+                        "container-max": "1200px",
+                        "section-gap": "80px"
+                    },
+                    fontFamily: {
+                        "label-md": ["Be Vietnam Pro"],
+                        "headline-lg": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "headline-md": ["Playfair Display"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "headline-sm": ["Playfair Display"],
+                        "label-lg": ["Be Vietnam Pro"]
+                    },
+                    fontSize: {
+                        "label-md": ["12px", { lineHeight: "16px", fontWeight: "500" }],
+                        "headline-lg": ["40px", { lineHeight: "48px", fontWeight: "700" }],
+                        "display-lg": ["56px", { lineHeight: "64px", letterSpacing: "-0.02em", fontWeight: "700" }],
+                        "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+                        "headline-md": ["32px", { lineHeight: "40px", fontWeight: "600" }],
+                        "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+                        "headline-sm": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+                        "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.1em", fontWeight: "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .ghost-border { border: 1px solid rgba(233, 195, 73, 0.3); }
+        .ghost-border:hover { border-color: rgba(233, 195, 73, 1); }
+        .gold-gradient-divider {
+            background: linear-gradient(90deg, transparent 0%, #e9c349 50%, transparent 100%);
+            height: 1px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="sticky top-0 w-full z-50 border-b border-secondary/30 shadow-sm" style="background-color: #002114;">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+<!-- Brand -->
+<a href="#" class="flex items-center"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJmM84VsxmT49MB8YiU5644CY7hDXNF05m_vfKzPy_wYESkN8gNMRoGs7u0T4O9iiE7E437_jcnKPRT4e6bnMdBavQ8hLDtCkwaydBD2RFLhwuv65V5IZVdDoQX1EWSHpi0K9S5NODPq9eW2cOotacX59GNQbuIeufu2fMMEjwpRgERlNxcV0YsJP0QZFuXwDJggLOgabqtCkz7OKOW9vgYgekkxFSUP6pEOM2OTqCHy1HaLeTdhKxpKLbD31QBboWYpg" alt="Tễu Tạc Logo" class="h-[48px] w-auto object-contain"></a>
+<!-- Links -->
+<div class="hidden md:flex items-center space-x-gutter">
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#about">Giới thiệu</a>
+<div class="relative group cursor-pointer">
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-300 flex items-center" href="#products">
+                        Sản phẩm
+                        <span class="material-symbols-outlined ml-1 text-[18px]">expand_more</span>
+</a>
+<div class="absolute left-0 mt-2 w-48 bg-surface-container-highest border border-secondary/30 shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+<a class="block px-4 py-2 font-body-md text-on-background hover:bg-secondary/20 hover:text-secondary" href="#products">Tễu Original</a>
+<a class="block px-4 py-2 font-body-md text-on-background hover:bg-secondary/20 hover:text-secondary" href="#products">Tễu Long</a>
+<a class="block px-4 py-2 font-body-md text-on-background hover:bg-secondary/20 hover:text-secondary" href="#products">Tễu Lân</a>
+<a class="block px-4 py-2 font-body-md text-on-background hover:bg-secondary/20 hover:text-secondary" href="#products">Tễu Quy</a>
+<a class="block px-4 py-2 font-body-md text-on-background hover:bg-secondary/20 hover:text-secondary" href="#products">Tễu Phụng</a>
+</div>
+</div>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#workshop">Workshop</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#news">Tin tức</a>
+</div>
+<!-- Actions -->
+<div class="flex items-center space-x-6">
+<button class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-300">VI/EN</button>
+<button class="text-on-surface-variant hover:text-secondary transition-colors duration-300 hover:scale-95 ease-in-out">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+<button class="bg-deep-red text-inverse-surface font-label-lg text-label-lg px-6 py-2 rounded ghost-border hover:border-secondary transition-all shadow-[0_0_15px_rgba(233,195,73,0.2)] hover:shadow-[0_0_20px_rgba(233,195,73,0.4)]">
+                    Mua Ngay</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center justify-center overflow-hidden">
+<!-- Background Image/Motif -->
+<div class="absolute inset-0 w-full h-full bg-primary-container z-0">
+<div class="absolute inset-0 bg-cover bg-center opacity-60" data-alt="A highly detailed illustration of a traditional Vietnamese water puppet stage (Thủy Đình) emerging from dark green waters, surrounded by stylized golden clouds and blooming pink lotus flowers. The scene is lit by warm, ambient golden light creating a majestic, premium, and festive mood. Deep forest green background, intricate gold linework, high contrast." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA_8iyx_YNyRFBeE-3hRgtCGySXb8bWBABX75wgoP3scg4y9PlWGVke47kqkqK1iToBHGDs66UlTFLRavye4dQnwIhax_0gs6psglrqYjZA6j0-HhbRDu62fydOn779cO-dgr5KAwkI5vQQkjUQW4LOh2pNHWqmYGCXG0IeFRuBHKRs-tSuBn0-pu5u2Ad9RfQTgni1MX-e7__tXEn-_Q_FpMt4pHIUmvVHGz7S3T0rYQr7jM80MjCz2g')"></div>
+</div>
+<div class="relative z-10 text-center max-w-3xl px-gutter mx-auto mt-20">
+<h1 class="font-display-lg text-display-lg text-secondary mb-6 drop-shadow-lg">Tự tay lắp Tễu – Chạm vào văn hóa múa rối nước Việt</h1>
+<p class="font-body-lg text-body-lg text-inverse-surface mb-10 opacity-90 max-w-2xl mx-auto">
+                Tễu Tạc mang nghệ thuật múa rối nước đến gần hơn với thế hệ trẻ, kết hợp giữa di sản truyền thống và trải nghiệm lắp ráp thủ công tinh tế.
+            </p>
+<div class="flex justify-center gap-6">
+<a class="px-8 py-3 border border-secondary text-secondary font-label-lg text-label-lg rounded hover:bg-secondary/10 transition-colors bg-surface-container-highest/50 backdrop-blur" href="#about">
+                    Khám phá ngay
+                </a>
+<button class="px-8 py-3 bg-deep-red text-inverse-surface font-label-lg text-label-lg rounded shadow-[0_0_15px_rgba(233,195,73,0.3)] hover:shadow-[0_0_25px_rgba(233,195,73,0.6)] transition-all">
+                    Mua Tễu
+                </button>
+</div>
+</div>
+<!-- Decorative Bottom Gradient -->
+<div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-background to-transparent z-10"></div>
+</section>
+<div class="gold-gradient-divider max-w-container-max mx-auto opacity-50"></div>
+<!-- About Section -->
+<section class="py-section-gap px-margin-desktop max-w-container-max mx-auto" id="about">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-secondary mb-6"><p data-start="588" data-end="632" class="PDq2pG_selectionAnchorContainer"><strong data-start="588" data-end="632">Chạm vào văn hóa qua trải nghiệm Tễu Tạc</strong><span aria-hidden="true" class="PDq2pG_selectionAnchor"></span></p>
+</h2><h3 data-section-id="pxq53s" data-start="634" data-end="648"></h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 leading-relaxed">
+                    Tễu Tạc phát triển Chú Tễu – hình tượng quen thuộc của nghệ thuật múa rối nước Việt Nam – thành bộ mô hình văn hóa DIY hiện đại. Người dùng không chỉ tự tay lắp ráp mà còn có thể điều khiển nhân vật bằng cơ chế dây treo, trưng bày và sưu tầm các phiên bản trong bộ sưu tập.
+                </p>
+<div class="grid grid-cols-2 gap-6">
+<!-- Feature Cards -->
+<div class="p-6 bg-surface-container-highest ghost-border rounded-lg relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-8 h-8 border-t border-r border-secondary opacity-50"></div>
+<span class="material-symbols-outlined text-secondary text-3xl mb-4">account_balance</span>
+<h3 class="font-headline-sm text-[18px] text-on-background mb-2 group-hover:text-secondary transition-colors">Văn hóa múa rối nước</h3>
+</div>
+<div class="p-6 bg-surface-container-highest ghost-border rounded-lg relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-8 h-8 border-t border-r border-secondary opacity-50"></div>
+<span class="material-symbols-outlined text-secondary text-3xl mb-4">construction</span>
+<h3 class="font-headline-sm text-[18px] text-on-background mb-2 group-hover:text-secondary transition-colors">Trải nghiệm DIY</h3>
+</div>
+<div class="p-6 bg-surface-container-highest ghost-border rounded-lg relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-8 h-8 border-t border-r border-secondary opacity-50"></div>
+<span class="material-symbols-outlined text-secondary text-3xl mb-4">animation</span>
+<h3 class="font-headline-sm text-[18px] text-on-background mb-2 group-hover:text-secondary transition-colors">Tương tác chuyển động</h3>
+</div>
+<div class="p-6 bg-surface-container-highest ghost-border rounded-lg relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-8 h-8 border-t border-r border-secondary opacity-50"></div>
+<span class="material-symbols-outlined text-secondary text-3xl mb-4">redeem</span>
+<h3 class="font-headline-sm text-[18px] text-on-background mb-2 group-hover:text-secondary transition-colors"><strong data-start="1351" data-end="1377">Trưng bày &amp; sưu tầm</strong><br data-start="1377" data-end="1380"></h3>
+</div>
+</div>
+</div>
+<div class="relative h-[600px] ghost-border p-2 rounded-lg bg-surface-container">
+<div class="w-full h-full bg-cover bg-center rounded" data-alt="Close up photography of hands carefully assembling a detailed wooden water puppet model. The wood has a rich, lacquered finish. The setting is a dimly lit, premium workshop with golden tools and soft warm spotlighting. Atmospheric depth, high-end craftsmanship vibe, forest green and gold tones." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBdZSple8cM1e8RzsYXVEjwZ_5tIVQUj7EXm6JaEgmp-ofeoXn0GSF1tXr0beIi7s7oXTb_nvXkw-hBdRzWk3vmX7wK0-tgTASz94fkVI6EN9RN7ed4IEbomsLp-uSlTlFhYqPgviQaofCh24u7LwERG_C31MoH6QOHC3PTflcxr6RVRnlUBi-6LHIt0zxgxl5PW48Ql10Z7ZwFOQ-weJxG3-t8LBV9F1-9s7b7afT01zJBxjBo49uAOw')"></div>
+</div>
+</div>
+</section>
+<!-- Products Section -->
+<section class="py-section-gap px-margin-desktop bg-surface-container-low" id="products">
+<div class="max-w-container-max mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-secondary mb-12 text-center">Bộ sưu tập Tễu Tạc</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+<!-- Product Cards -->
+<div class="bg-surface-container-highest ghost-border rounded-lg overflow-hidden group">
+<div class="h-64 bg-surface-container relative">
+<div class="absolute inset-0 bg-secondary/10 group-hover:bg-transparent transition-colors z-10"></div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-sm text-[24px] text-secondary mb-2">Tễu Original</h3>
+
+<div class="flex justify-between items-center">
+<span class="font-headline-sm text-on-background">580.000 đ</span>
+<button class="p-2 text-secondary hover:bg-secondary/10 rounded-full transition-colors"><span class="material-symbols-outlined">add_shopping_cart</span></button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-highest ghost-border rounded-lg overflow-hidden group">
+<div class="h-64 bg-surface-container relative">
+<div class="absolute inset-0 bg-secondary/10 group-hover:bg-transparent transition-colors z-10"></div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-sm text-[24px] text-secondary mb-2">Tễu Long</h3>
+
+<div class="flex justify-between items-center">
+<span class="font-headline-sm text-on-background">685.000 đ</span>
+<button class="p-2 text-secondary hover:bg-secondary/10 rounded-full transition-colors"><span class="material-symbols-outlined">add_shopping_cart</span></button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-highest ghost-border rounded-lg overflow-hidden group">
+<div class="h-64 bg-surface-container relative">
+<div class="absolute inset-0 bg-secondary/10 group-hover:bg-transparent transition-colors z-10"></div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-sm text-[24px] text-secondary mb-2">Tễu Lân</h3>
+
+<div class="flex justify-between items-center">
+<span class="font-headline-sm text-on-background">640.000 đ</span>
+<button class="p-2 text-secondary hover:bg-secondary/10 rounded-full transition-colors"><span class="material-symbols-outlined">add_shopping_cart</span></button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-highest ghost-border rounded-lg overflow-hidden group">
+<div class="h-64 bg-surface-container relative">
+<div class="absolute inset-0 bg-secondary/10 group-hover:bg-transparent transition-colors z-10"></div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-sm text-[24px] text-secondary mb-2">Tễu Quy</h3>
+
+<div class="flex justify-between items-center">
+<span class="font-headline-sm text-on-background">640.000 đ</span>
+<button class="p-2 text-secondary hover:bg-secondary/10 rounded-full transition-colors"><span class="material-symbols-outlined">add_shopping_cart</span></button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-highest ghost-border rounded-lg overflow-hidden group">
+<div class="h-64 bg-surface-container relative">
+<div class="absolute inset-0 bg-secondary/10 group-hover:bg-transparent transition-colors z-10"></div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-sm text-[24px] text-secondary mb-2">Tễu Phụng</h3>
+
+<div class="flex justify-between items-center">
+<span class="font-headline-sm text-on-background">685.000 đ</span>
+<button class="p-2 text-secondary hover:bg-secondary/10 rounded-full transition-colors"><span class="material-symbols-outlined">add_shopping_cart</span></button>
+</div>
+</div>
+</div>
+</div>
+<!-- Combo Block -->
+<div class="bg-primary-container border border-secondary/50 rounded-xl p-8 relative overflow-hidden">
+<div class="absolute inset-0 bg-secondary/5 opacity-50 z-0"></div>
+<div class="relative z-10 flex flex-col md:flex-row justify-between items-center gap-8">
+<div>
+<h3 class="font-headline-lg text-[32px] text-secondary mb-4">Bộ sưu tập Tễu Trẩy Hội</h3>
+<p class="font-body-lg text-on-surface mb-2">Sở hữu trọn bộ 5 mô hình Tễu Tạc với ưu đãi đặc biệt.</p>
+<p class="font-body-md text-on-surface-variant">Tặng kèm đế trưng bày và hộp quà cao cấp.</p>
+</div>
+<div class="text-right">
+<div class="font-headline-lg text-secondary mb-4">2.890.000 đ <span class="text-on-surface-variant text-lg line-through ml-2">3.230.000 đ</span></div>
+<button class="bg-deep-red text-inverse-surface font-label-lg text-label-lg px-8 py-3 rounded ghost-border shadow-[0_0_15px_rgba(233,195,73,0.2)] hover:shadow-[0_0_20px_rgba(233,195,73,0.4)] transition-all">Mua Trọn Bộ</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="gold-gradient-divider max-w-container-max mx-auto opacity-50"></div>
+<!-- Workshop Section -->
+<section class="py-section-gap px-margin-desktop max-w-container-max mx-auto" id="workshop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-secondary mb-6">Trải nghiệm Tễu Tạc</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6 leading-relaxed">
+                Tham gia không gian sáng tạo của chúng tôi để tự tay lắp ráp và thổi hồn vào những mô hình Tễu. Một trải nghiệm văn hóa độc đáo dành cho bạn và người thân.
+            </p>
+<ul class="space-y-4 mb-8 text-on-background font-body-md">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">check_circle</span> Tìm hiểu nghệ thuật rối nước</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">check_circle</span> Hướng dẫn lắp ráp chi tiết từ nghệ nhân</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">check_circle</span> Mang thành phẩm mang dấu ấn cá nhân về nhà</li>
+</ul>
+</div>
+<div class="bg-surface-container-highest ghost-border rounded-xl p-8">
+<h3 class="font-headline-md text-[24px] text-secondary mb-6">Đăng ký Workshop</h3>
+<form class="space-y-4">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<input class="w-full bg-surface-container border-outline-variant text-on-surface rounded focus:border-secondary focus:ring-1 focus:ring-secondary" placeholder="Họ và tên" type="text">
+<input class="w-full bg-surface-container border-outline-variant text-on-surface rounded focus:border-secondary focus:ring-1 focus:ring-secondary" placeholder="Số điện thoại" type="tel">
+</div>
+<input class="w-full bg-surface-container border-outline-variant text-on-surface rounded focus:border-secondary focus:ring-1 focus:ring-secondary" placeholder="Email" type="email">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<input class="w-full bg-surface-container border-outline-variant text-on-surface rounded focus:border-secondary focus:ring-1 focus:ring-secondary" min="1" placeholder="Số lượng người tham gia" type="number">
+<select class="w-full bg-surface-container border-outline-variant text-on-surface rounded focus:border-secondary focus:ring-1 focus:ring-secondary">
+<option>Chọn gói Workshop</option>
+<option>Workshop Cơ Bản</option>
+<option>Workshop Gia Đình</option>
+</select>
+</div>
+<textarea class="w-full bg-surface-container border-outline-variant text-on-surface rounded focus:border-secondary focus:ring-1 focus:ring-secondary" placeholder="Ghi chú thêm (nếu có)" rows="3"></textarea>
+<button class="w-full bg-deep-red text-inverse-surface font-label-lg text-label-lg px-6 py-3 rounded ghost-border shadow-[0_0_15px_rgba(233,195,73,0.2)] hover:shadow-[0_0_20px_rgba(233,195,73,0.4)] transition-all mt-4">
+                    Đăng ký tham gia
+                </button>
+</form>
+</div>
+</div>
+</section>
+<!-- News Section -->
+<section class="py-section-gap px-margin-desktop bg-surface-container-low" id="news">
+<div class="max-w-container-max mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-secondary mb-12 text-center">Tin tức &amp; Workshop sắp tới</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- News Card 1 -->
+<div class="bg-surface-container-highest ghost-border rounded-lg overflow-hidden group flex flex-col h-full">
+<div class="h-48 bg-surface-container"></div>
+<div class="p-6 flex-grow">
+<span class="text-xs font-label-md text-secondary uppercase tracking-wider mb-2 block">Workshop</span>
+<h3 class="font-headline-sm text-[20px] text-on-background mb-3 group-hover:text-secondary transition-colors">Workshop Lắp Ráp Tễu Cuối Tuần</h3>
+<p class="font-body-md text-on-surface-variant text-sm mb-4">Cùng gia đình tận hưởng cuối tuần sáng tạo với mô hình Tễu Tạc.</p>
+<div class="mt-auto flex flex-col gap-1 text-sm text-on-surface-variant/70">
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px]">calendar_month</span> 15/10/2023</span>
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px]">location_on</span> Tễu Tạc Studio, Hà Nội</span>
+</div>
+</div>
+</div>
+<!-- News Card 2 -->
+<div class="bg-surface-container-highest ghost-border rounded-lg overflow-hidden group flex flex-col h-full">
+<div class="h-48 bg-surface-container"></div>
+<div class="p-6 flex-grow">
+<span class="text-xs font-label-md text-secondary uppercase tracking-wider mb-2 block">Sự kiện</span>
+<h3 class="font-headline-sm text-[20px] text-on-background mb-3 group-hover:text-secondary transition-colors">Tễu Tạc tại Hội Chợ Thủ Công Mỹ Nghệ</h3>
+<p class="font-body-md text-on-surface-variant text-sm mb-4">Gặp gỡ và trải nghiệm các sản phẩm mới nhất của Tễu Tạc tại sự kiện thường niên.</p>
+<div class="mt-auto flex flex-col gap-1 text-sm text-on-surface-variant/70">
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px]">calendar_month</span> 20/10 - 22/10/2023</span>
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px]">location_on</span> Cung Triển Lãm Kiến Trúc, Hà Nội</span>
+</div>
+</div>
+</div>
+<!-- News Card 3 -->
+<div class="bg-surface-container-highest ghost-border rounded-lg overflow-hidden group flex flex-col h-full">
+<div class="h-48 bg-surface-container"></div>
+<div class="p-6 flex-grow">
+<span class="text-xs font-label-md text-secondary uppercase tracking-wider mb-2 block">Sản phẩm mới</span>
+<h3 class="font-headline-sm text-[20px] text-on-background mb-3 group-hover:text-secondary transition-colors">Ra mắt Bộ Sưu Tập Tễu Trẩy Hội</h3>
+<p class="font-body-md text-on-surface-variant text-sm mb-4">Khám phá ý nghĩa văn hóa đằng sau bộ sưu tập Long - Lân - Quy - Phụng.</p>
+<div class="mt-auto flex flex-col gap-1 text-sm text-on-surface-variant/70">
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px]">calendar_month</span> 01/11/2023</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="gold-gradient-divider max-w-container-max mx-auto opacity-50"></div>
+<!-- Footage Section -->
+<section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-secondary mb-12 text-center">Khoảnh khắc Tễu Tạc</h2>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+<!-- Large Image -->
+<div class="col-span-2 row-span-2 h-96 bg-surface-container rounded-lg ghost-border overflow-hidden relative group">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all"></div>
+</div>
+<!-- Smaller Images/Videos -->
+<div class="h-48 bg-surface-container rounded-lg ghost-border overflow-hidden relative group flex items-center justify-center">
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all"></div>
+<span class="material-symbols-outlined text-white text-4xl relative z-10">play_circle</span>
+</div>
+<div class="h-48 bg-surface-container rounded-lg ghost-border overflow-hidden relative group">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all"></div>
+</div>
+<div class="h-48 bg-surface-container rounded-lg ghost-border overflow-hidden relative group">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all"></div>
+</div>
+<div class="col-span-2 h-48 bg-surface-container rounded-lg ghost-border overflow-hidden relative group">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all"></div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full pt-16 pb-8 border-t border-secondary/20" style="background-color: rgb(0, 33, 20);">
+<div class="grid grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto mb-12">
+<div>
+<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHipXn63FjmMLkKpFmBt30OiTq9vBDVR2SI_axBiZSCHPUVUAi5kxHZ_Yxi33a-LvUd-XeQsSvyIifEzoCQyPPJ1YZrc3sY_f0BUyZNO1O86CAQRghqr0BTpCl4Evhd7OcY1yfVD6QvTygp2kHmvNzeg2nzUu6j3heomkhQ7nszphiTf3wks5hqL9bKLiGIoJUd84aTGkPeD37G1NrKW0omEJvFNXQNChW6Ol5InuKmcI8rBc24-fGebgqiYTogGjmweo" alt="Tễu Tạc Logo" class="h-[56px] w-auto object-contain mb-4">
+<p class="font-body-md text-body-md text-on-surface-variant"></p><blockquote data-start="649" data-end="724" class=""><p data-start="651" data-end="724" class="PDq2pG_selectionAnchorContainer"><strong data-start="651" data-end="724">Mô hình DIY văn hóa lấy cảm hứng từ nghệ thuật múa rối nước Việt Nam.</strong><span aria-hidden="true" class="PDq2pG_selectionAnchor"></span></p>
+</blockquote>
+<p data-start="726" data-end="754"></p><p></p>
+<div class="flex gap-4 mt-6"><a class="text-secondary hover:scale-110 transition-all duration-300" href="#" aria-label="Facebook"></a><a class="text-secondary hover:scale-110 transition-all duration-300" href="#" aria-label="TikTok"></a><a class="text-secondary hover:scale-110 transition-all duration-300" href="#" aria-label="Instagram"></a></div>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-secondary font-semibold mb-4">Về Tễu Tạc</h4>
+<ul class="space-y-3">
+<li class=""><a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors hover:translate-x-1 inline-block duration-200" href="#about">Về chúng tôi</a></li>
+<li class=""><a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors hover:translate-x-1 inline-block duration-200" href="#news">Tin tức</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-secondary font-semibold mb-4">Khám phá</h4>
+<ul class="space-y-3">
+<li class=""><a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors hover:translate-x-1 inline-block duration-200" href="#products">Bộ sưu tập</a></li>
+<li class=""><a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors hover:translate-x-1 inline-block duration-200" href="#workshop">Workshop</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-secondary font-semibold mb-4">Hỗ trợ</h4>
+<ul class="space-y-3">
+<li class=""><a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors hover:translate-x-1 inline-block duration-200" href="#">Chính sách bảo mật</a></li>
+<li class=""><a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors hover:translate-x-1 inline-block duration-200" href="#">Điều khoản dịch vụ</a></li>
+<li class=""><a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors hover:translate-x-1 inline-block duration-200" href="#">Liên hệ</a></li>
+</ul>
+</div>
+</div>
+<div class="px-margin-desktop max-w-container-max mx-auto text-center font-body-md text-on-surface-variant/70 border-t border-secondary/10 pt-8"><blockquote data-start="1410" data-end="1452" class=""><p data-start="1412" data-end="1452" class="PDq2pG_selectionAnchorContainer"><strong data-start="1412" data-end="1452">© 2026 Tễu Tạc. All rights reserved.</strong><span aria-hidden="true" class="PDq2pG_selectionAnchor"></span></p>
+</blockquote>
+<p data-start="1454" data-end="1479"></p></div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+</body></html>

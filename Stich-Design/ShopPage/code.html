@@ -1,0 +1,318 @@
+<!DOCTYPE html><html class="dark" lang="vi" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Tễu Tạc - Cửa hàng</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface-variant": "#c0c9c1",
+                        "primary": "#9cd2b5",
+                        "secondary-fixed-dim": "#e9c349",
+                        "on-surface": "#e9e2d2",
+                        "on-primary-fixed-variant": "#1b503a",
+                        "secondary": "#e9c349",
+                        "secondary-fixed": "#ffe088",
+                        "on-primary-container": "#77ac90",
+                        "error": "#ffb4ab",
+                        "surface-variant": "#383529",
+                        "outline": "#8a938c",
+                        "surface-container-low": "#1e1c12",
+                        "inverse-primary": "#356850",
+                        "surface": "#16130a",
+                        "on-primary": "#003825",
+                        "surface-bright": "#3c392e",
+                        "inverse-on-surface": "#333025",
+                        "on-secondary-container": "#342800",
+                        "on-tertiary": "#690007",
+                        "background": "#16130a",
+                        "tertiary-fixed": "#ffdad6",
+                        "error-container": "#93000a",
+                        "on-background": "#e9e2d2",
+                        "tertiary": "#ffb4ac",
+                        "on-primary-fixed": "#002114",
+                        "tertiary-container": "#760009",
+                        "primary-container": "#06402b",
+                        "surface-container-lowest": "#100e06",
+                        "on-error-container": "#ffdad6",
+                        "inverse-surface": "#e9e2d2",
+                        "surface-container-highest": "#383529",
+                        "on-secondary-fixed": "#241a00",
+                        "secondary-container": "#af8d11",
+                        "outline-variant": "#404943",
+                        "surface-container-high": "#2d2a1f",
+                        "on-secondary": "#3c2f00",
+                        "on-tertiary-fixed": "#410003",
+                        "surface-tint": "#9cd2b5",
+                        "primary-fixed": "#b8efd0",
+                        "on-tertiary-fixed-variant": "#92030f",
+                        "on-secondary-fixed-variant": "#574500",
+                        "on-error": "#690005",
+                        "on-tertiary-container": "#ff776c",
+                        "surface-container": "#222015",
+                        "primary-fixed-dim": "#9cd2b5",
+                        "surface-dim": "#16130a",
+                        "tertiary-fixed-dim": "#ffb4ac"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "section-gap": "80px",
+                        "gutter": "24px",
+                        "margin-desktop": "64px",
+                        "container-max": "1200px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Be Vietnam Pro"],
+                        "headline-lg": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "headline-sm": ["Playfair Display"],
+                        "label-md": ["Be Vietnam Pro"],
+                        "headline-md": ["Playfair Display"],
+                        "label-lg": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg": ["40px", { "lineHeight": "48px", "fontWeight": "700" }],
+                        "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        .bg-pattern {
+            background-image: radial-gradient(theme('colors.secondary/5') 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="font-body-md bg-pattern min-h-screen flex flex-col" style="background-color: rgb(36, 26, 0);">
+<!-- TopNavBar -->
+<nav class="sticky top-0 w-full z-50 border-b border-secondary/30 shadow-sm transition-all" style="background-color: rgb(0, 33, 20);">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+<div class="h-12 w-auto flex items-center"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuANmdrDUoVOEhORNvK3RSZ_hPoF-WxtXtUwcZ99PMzNBzMsyH0spqBsN2PY8orSHwjD1D54kHaRwOMKOAIm8TE74oTThtFi-i-9JB6taBHBIO2-neKYmpIZGPLfbqIvxhIviyEljDZQpkwsV1Gd9vsdPDRl4ewRSFa6QI9PH0Jd4PZGtkjy3Jg1uLr6lVhkANf4Q57zQ-T9hgIdJ-KfcZ846Rp4Ghn9lB8kkt_LCitlGMFP7cs7YRySkLm5yhnb1V0-1WU" alt="Tễu Tạc Logo" class="h-full object-contain"></div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-lg text-label-lg hover:bg-surface-variant/20 transition-all px-3 py-2 rounded-DEFAULT" href="#">Giới thiệu</a>
+<div class="relative group">
+  <button class="flex items-center gap-1 text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-lg text-label-lg hover:bg-surface-variant/20 px-3 py-2 rounded-DEFAULT transition-all">
+    Sản phẩm
+    <span class="material-symbols-outlined text-[18px]">expand_more</span>
+  </button>
+  <div class="absolute left-0 top-full pt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+    <div class="bg-[#16130a] border border-secondary/30 rounded-DEFAULT shadow-xl overflow-hidden">
+      <a href="#" class="block px-4 py-3 text-label-lg font-label-lg text-secondary hover:bg-secondary/10 transition-colors border-b border-secondary/10">Tễu Original</a>
+      <a href="#" class="block px-4 py-3 text-label-lg font-label-lg text-secondary hover:bg-secondary/10 transition-colors border-b border-secondary/10">Tễu Long</a>
+      <a href="#" class="block px-4 py-3 text-label-lg font-label-lg text-secondary hover:bg-secondary/10 transition-colors border-b border-secondary/10">Tễu Lân</a>
+      <a href="#" class="block px-4 py-3 text-label-lg font-label-lg text-secondary hover:bg-secondary/10 transition-colors border-b border-secondary/10">Tễu Quy</a>
+      <a href="#" class="block px-4 py-3 text-label-lg font-label-lg text-secondary hover:bg-secondary/10 transition-colors border-b border-secondary/10">Tễu Phụng</a>
+      <a href="#" class="block px-4 py-3 text-label-lg font-label-lg text-secondary hover:bg-secondary/10 transition-colors">Tễu Trẩy Hội</a>
+    </div>
+  </div>
+</div>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-lg text-label-lg hover:bg-surface-variant/20 transition-all px-3 py-2 rounded-DEFAULT" href="#">Workshop</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-lg text-label-lg hover:bg-surface-variant/20 transition-all px-3 py-2 rounded-DEFAULT" href="#">Tin tức</a>
+</div>
+<div class="flex items-center gap-6">
+<span class="dark:text-secondary-fixed font-label-lg text-label-lg cursor-pointer hover:bg-surface-variant/20 hover:text-secondary transition-all px-2 py-1 rounded-DEFAULT text-white duration-300">VI/EN</span>
+<button class="text-on-background hover:text-secondary transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">shopping_cart</span>
+</button>
+<button class="bg-[#B22222] text-[#F5F5DC] font-label-lg text-label-lg px-6 py-2 rounded-DEFAULT hover:opacity-90 transition-opacity border border-transparent hover:border-secondary shadow-[0_0_10px_rgba(233,195,73,0.2)]">Mua Ngay</button>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow max-w-container-max mx-auto w-full px-margin-desktop py-section-gap relative">
+<!-- Header Section -->
+<div class="text-center mb-16 relative">
+<!-- Ornamental decorative element -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-transparent via-secondary to-transparent opacity-50"></div>
+<h1 class="font-headline-lg text-headline-lg text-secondary mb-4 mt-8">Các sản phẩm Tễu Tạc</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Chọn một Tễu để bắt đầu hành trình lắp ráp và khám phá câu chuyện văn hóa phía sau mỗi nhân vật.</p>
+</div>
+<!-- Filter Bar -->
+<div class="flex flex-wrap justify-center gap-4 mb-12 border-b border-secondary/20 pb-6">
+<button class="px-6 py-2 rounded-full bg-secondary/10 border border-secondary text-secondary font-label-lg text-label-lg transition-all">Tất cả</button>
+<button class="px-6 py-2 rounded-full bg-transparent border border-outline hover:border-secondary hover:text-secondary text-on-surface-variant font-label-lg text-label-lg transition-all">Tễu Original</button>
+<button class="px-6 py-2 rounded-full bg-transparent border border-outline hover:border-secondary hover:text-secondary text-on-surface-variant font-label-lg text-label-lg transition-all">Tễu Trẩy Hội</button>
+<button class="px-6 py-2 rounded-full bg-transparent border border-outline hover:border-secondary hover:text-secondary text-on-surface-variant font-label-lg text-label-lg transition-all flex items-center gap-1">Giá <span class="material-symbols-outlined text-[16px]">expand_more</span></button>
+<button class="px-6 py-2 rounded-full bg-transparent border border-outline hover:border-secondary hover:text-secondary text-on-surface-variant font-label-lg text-label-lg transition-all">Combo</button>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Product 1 -->
+<div class="group bg-surface-container-low border border-secondary/30 p-4 rounded-DEFAULT relative overflow-hidden transition-all duration-300 hover:border-secondary hover:shadow-[0_0_15px_rgba(233,195,73,0.1)] flex flex-col h-full">
+<!-- L-shape corners -->
+<div class="absolute top-0 left-0 w-6 h-6 border-t border-l border-secondary opacity-50 m-2"></div>
+<div class="absolute top-0 right-0 w-6 h-6 border-t border-r border-secondary opacity-50 m-2"></div>
+<div class="aspect-square mb-6 overflow-hidden rounded-DEFAULT border border-secondary/20 bg-surface-container relative p-4 flex items-center justify-center">
+<img class="object-contain w-full h-full group-hover:scale-105 transition-transform duration-500" data-alt="A highly detailed product shot of a traditional Vietnamese water puppet character named 'Tễu Original'. The puppet is beautifully handcrafted from wood with vibrant red and gold lacquer accents, standing against a dark, elegant forest green background. The lighting is dramatic and premium, highlighting the smooth texture and intricate artisanal details. A subtle warm, golden spotlight illuminates the figure from above." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpy6qPpkEIRV81korSG2H933AxGwLBjvuRTPfxW5VFm32oOU4rPuKRMtTrZY77m1sjoN6mQ9WLNHm2TKLVif-dnZPf7uooUeTJsd7QCqj_rOQe6dLd8c7WS8-SQLARiwQ30ZQv_nHXa_d5vuV2Iu6pUqcedrMkdIktY_0WjXWYJiEBzoR_tsocjLn_Bg3Drb-HoIiJwD7QCoK77jwQ1SJOO73fDIhSO35Eh5RkGtLtILtFUWT3YeHL05o7pykNoAmjkAZ5V6PPW2ARd7Q">
+</div>
+<div class="flex-grow flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-secondary mb-2">Tễu Original</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 flex-grow">Phiên bản Chú Tễu nguyên bản, lấy cảm hứng từ nghệ thuật múa rối nước Việt Nam.</p>
+<div class="font-headline-sm text-headline-sm text-on-surface mb-6">580.000 VND</div>
+<div class="flex gap-3 mt-auto">
+<button class="flex-1 bg-[#B22222] text-[#F5F5DC] font-label-lg text-label-lg py-3 rounded-DEFAULT hover:opacity-90 transition-opacity border border-transparent hover:border-secondary/50">Thêm vào giỏ</button>
+<button class="flex-1 bg-transparent border border-secondary text-secondary font-label-lg text-label-lg py-3 rounded-DEFAULT hover:bg-secondary/10 transition-colors">Xem chi tiết</button>
+</div>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="group bg-surface-container-low border border-secondary/30 p-4 rounded-DEFAULT relative overflow-hidden transition-all duration-300 hover:border-secondary hover:shadow-[0_0_15px_rgba(233,195,73,0.1)] flex flex-col h-full">
+<div class="absolute top-0 left-0 w-6 h-6 border-t border-l border-secondary opacity-50 m-2"></div>
+<div class="absolute top-0 right-0 w-6 h-6 border-t border-r border-secondary opacity-50 m-2"></div>
+<div class="aspect-square mb-6 overflow-hidden rounded-DEFAULT border border-secondary/20 bg-surface-container relative p-4 flex items-center justify-center">
+<img class="object-contain w-full h-full group-hover:scale-105 transition-transform duration-500" data-alt="A highly detailed product shot of a traditional Vietnamese water puppet character named 'Tễu Long' inspired by a dragon. The puppet is meticulously handcrafted from wood featuring majestic golden scales and deep red lacquer details, set against a dark forest green background. Studio lighting enhances the regal and mythical aesthetic, showcasing the intricate artisanal carving." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTuhxAgHuJbhH_jLVMuEU5GkB-8-lJgDwCmDbjnGcFNH9q2fGgcQkp9R6XP74fsAdF3edSbQpDb3vA_XroE4-6zZZztWzxkP7UN79AMzJOdq8FTac1ooNPyQZQiZ6a9eFTB1eRsRev1-9I5dllq1-sODOVZFXiBuNUsFXrnd4bZh8x-fTYIVoBGlZI1mPKcDbXlcI9OPlo3MmC-mrhU3XA3feYY4JeXhmMN_OKWHdhBwpt_HvDQlrUwiQJTlWrYl5mt9Q0lGpiMmtM2TE">
+</div>
+<div class="flex-grow flex flex-col">
+<div class="flex items-start justify-between mb-2">
+<h3 class="font-headline-sm text-headline-sm text-secondary">Tễu Long</h3>
+<span class="bg-[#B22222] text-[#F5F5DC] font-label-md text-label-md px-2 py-1 rounded-full text-xs">Mới</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 flex-grow">Phiên bản thuộc bộ Tễu Trẩy Hội, lấy cảm hứng từ hình tượng Long trong Tứ Linh.</p>
+<div class="font-headline-sm text-headline-sm text-on-surface mb-6">685.000 VND</div>
+<div class="flex gap-3 mt-auto">
+<button class="flex-1 bg-[#B22222] text-[#F5F5DC] font-label-lg text-label-lg py-3 rounded-DEFAULT hover:opacity-90 transition-opacity border border-transparent hover:border-secondary/50">Thêm vào giỏ</button>
+<button class="flex-1 bg-transparent border border-secondary text-secondary font-label-lg text-label-lg py-3 rounded-DEFAULT hover:bg-secondary/10 transition-colors">Xem chi tiết</button>
+</div>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="group bg-surface-container-low border border-secondary/30 p-4 rounded-DEFAULT relative overflow-hidden transition-all duration-300 hover:border-secondary hover:shadow-[0_0_15px_rgba(233,195,73,0.1)] flex flex-col h-full">
+<div class="absolute top-0 left-0 w-6 h-6 border-t border-l border-secondary opacity-50 m-2"></div>
+<div class="absolute top-0 right-0 w-6 h-6 border-t border-r border-secondary opacity-50 m-2"></div>
+<div class="aspect-square mb-6 overflow-hidden rounded-DEFAULT border border-secondary/20 bg-surface-container relative p-4 flex items-center justify-center">
+<img class="object-contain w-full h-full group-hover:scale-105 transition-transform duration-500" data-alt="A high-quality product photo of a Vietnamese wooden water puppet named 'Tễu Lân' resembling a mythical unicorn-lion (Kỳ Lân). Handcrafted with intricate textures, featuring rich gold and forest green lacquered wood against a dark elegant background. The lighting highlights the festive and playful expression of the artisanal piece." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAx8-uwudkGWcsehbbTXDvhhyML6r7WyedSOOdxYOylPAAm-R9E8Drj36-5nklY35x6ZM5u-yEwZORjVuBX5uJpfQZqGaiq4_7gca7l8Iiecyd_2-K_PkcOZuYsO66tN0BOMk8vU7uEF0zTeMpONMPjzQQhvHKrAwDc1rBeniifKZBxEtge0QAAGAhzYToo5GDPScndPUdnN7CzMasyy5t-vtGckcYz9gRjxlXUAnhfq7VUVWnyhS6UgFrefQzLo4aJd65kBGtGbI3msTE">
+</div>
+<div class="flex-grow flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-secondary mb-2">Tễu Lân</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 flex-grow">Phiên bản thuộc bộ Tễu Trẩy Hội, lấy cảm hứng từ hình tượng Lân trong Tứ Linh.</p>
+<div class="font-headline-sm text-headline-sm text-on-surface mb-6">640.000 VND</div>
+<div class="flex gap-3 mt-auto">
+<button class="flex-1 bg-[#B22222] text-[#F5F5DC] font-label-lg text-label-lg py-3 rounded-DEFAULT hover:opacity-90 transition-opacity border border-transparent hover:border-secondary/50">Thêm vào giỏ</button>
+<button class="flex-1 bg-transparent border border-secondary text-secondary font-label-lg text-label-lg py-3 rounded-DEFAULT hover:bg-secondary/10 transition-colors">Xem chi tiết</button>
+</div>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="group bg-surface-container-low border border-secondary/30 p-4 rounded-DEFAULT relative overflow-hidden transition-all duration-300 hover:border-secondary hover:shadow-[0_0_15px_rgba(233,195,73,0.1)] flex flex-col h-full">
+<div class="absolute top-0 left-0 w-6 h-6 border-t border-l border-secondary opacity-50 m-2"></div>
+<div class="absolute top-0 right-0 w-6 h-6 border-t border-r border-secondary opacity-50 m-2"></div>
+<div class="aspect-square mb-6 overflow-hidden rounded-DEFAULT border border-secondary/20 bg-surface-container relative p-4 flex items-center justify-center">
+<img class="object-contain w-full h-full group-hover:scale-105 transition-transform duration-500" data-alt="A beautifully lit studio shot of a traditional Vietnamese wooden puppet named 'Tễu Quy' inspired by a sacred turtle. The piece is finely carved with rich dark wood and striking golden shell details, presented on a dark, premium forest green backdrop. Soft, directional lighting emphasizes the handcrafted lacquer finish and serene aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzY1L8aqG8YUVhbIoFnD6hh5dXXfwr1uLCySXWBWu0FWf_OFu2Zm89TVBzlX-ql5ORfftou1L7GSjw2gc305C3DlPcT3bgZBbxsLwrd-3Z63TLbNVDhMa5dmpMLJW04LJVrGXNavg2oQcds14_IJECsN3H5sNJSl6bQ_heMA0gv6Zd8FRTy3xBfZWY-9wO02PpZvPE0WvA1Iow8705x5Ql9K7NgtAvxrfA2Cszcr2UKt1-CRJHsaPfKQ">
+</div>
+<div class="flex-grow flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-secondary mb-2">Tễu Quy</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 flex-grow">Phiên bản thuộc bộ Tễu Trẩy Hội, lấy cảm hứng từ hình tượng Quy trong Tứ Linh.</p>
+<div class="font-headline-sm text-headline-sm text-on-surface mb-6">640.000 VND</div>
+<div class="flex gap-3 mt-auto">
+<button class="flex-1 bg-[#B22222] text-[#F5F5DC] font-label-lg text-label-lg py-3 rounded-DEFAULT hover:opacity-90 transition-opacity border border-transparent hover:border-secondary/50">Thêm vào giỏ</button>
+<button class="flex-1 bg-transparent border border-secondary text-secondary font-label-lg text-label-lg py-3 rounded-DEFAULT hover:bg-secondary/10 transition-colors">Xem chi tiết</button>
+</div>
+</div>
+</div>
+<!-- Product 5 -->
+<div class="group bg-surface-container-low border border-secondary/30 p-4 rounded-DEFAULT relative overflow-hidden transition-all duration-300 hover:border-secondary hover:shadow-[0_0_15px_rgba(233,195,73,0.1)] flex flex-col h-full">
+<div class="absolute top-0 left-0 w-6 h-6 border-t border-l border-secondary opacity-50 m-2"></div>
+<div class="absolute top-0 right-0 w-6 h-6 border-t border-r border-secondary opacity-50 m-2"></div>
+<div class="aspect-square mb-6 overflow-hidden rounded-DEFAULT border border-secondary/20 bg-surface-container relative p-4 flex items-center justify-center">
+<img class="object-contain w-full h-full group-hover:scale-105 transition-transform duration-500" data-alt="An elegant product photograph of a Vietnamese water puppet character named 'Tễu Phụng' designed after a mythical phoenix. The puppet showcases stunning artisanal craftsmanship with flowing lines, detailed gold leaf accents, and vibrant red lacquer against a sophisticated dark green background. Studio lighting creates a regal and luxurious presentation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw5luqDRXLa-t9jEAuX-36jJXAHEfekX8BqCU9CUfBQCda2a9niQxHdTovnEnGmF982T688Bnm4PLC9PSXLwcfsgBxqKbHO8-vhxQUQ1tLPq5uzsUhDdzE78sok8MlZWfu6MI5JZKQ6lAy82CQrfJDBYIi2vJJ3JS1moP0Tbblw48GkJ-4unDQ6IopEI9rghbUFyilLLEDokJuYiqtzU0PqylWyXCxiDT2NJWBzYfbZ8WktkyFR_Jg1Q">
+</div>
+<div class="flex-grow flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-secondary mb-2">Tễu Phụng</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 flex-grow">Phiên bản thuộc bộ Tễu Trẩy Hội, lấy cảm hứng từ hình tượng Quy trong Tứ Linh.</p>
+<div class="font-headline-sm text-headline-sm text-on-surface mb-6">685.000 VND</div>
+<div class="flex gap-3 mt-auto">
+<button class="flex-1 bg-[#B22222] text-[#F5F5DC] font-label-lg text-label-lg py-3 rounded-DEFAULT hover:opacity-90 transition-opacity border border-transparent hover:border-secondary/50">Thêm vào giỏ</button>
+<button class="flex-1 bg-transparent border border-secondary text-secondary font-label-lg text-label-lg py-3 rounded-DEFAULT hover:bg-secondary/10 transition-colors">Xem chi tiết</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-16 pb-8 border-t border-secondary/20" style="background-color: rgb(0, 33, 20);">
+<div class="grid grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto mb-12">
+<div>
+<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDagv0JjYNZ13I2xVhlMLd3O-9ktYAOOJuyw4l5UxpaoY-ONTb7TrTyIxYUXlH_j2sPsRxjgcs2Mx1YKE9R09FmhcRBnE_usemSSN3MbfygBr8gwZbWhYqA2-tzuR5JRagjFATh_K7zMebm5FaIRPtyg62L1MHK_iNMRkcsPHki8TPRt6XeWGt2hCBtILeV6GwXUy2v3qRbcXxNl0vc1gyrtkhx20ZuuXzUtHgkM7EqlMfCAXubCvD3i-Ocb0Rh0LICfts" alt="Tễu Tạc Logo" class="h-[56px] w-auto object-contain mb-4">
+<p class="font-body-md text-body-md text-on-surface-variant"></p><blockquote class=""><p class="PDq2pG_selectionAnchorContainer text-on-surface"><strong>Mô hình DIY văn hóa lấy cảm hứng từ nghệ thuật múa rối nước Việt Nam.</strong></p>
+</blockquote><p></p>
+<div class="flex gap-4 mt-6">
+<a class="text-secondary hover:scale-110 transition-all duration-300" href="#" aria-label="Facebook"><span class="material-symbols-outlined">facebook</span></a>
+<a class="text-secondary hover:scale-110 transition-all duration-300" href="#" aria-label="TikTok"><span class="material-symbols-outlined">video_library</span></a>
+<a class="text-secondary hover:scale-110 transition-all duration-300" href="#" aria-label="Instagram"><span class="material-symbols-outlined">photo_camera</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-secondary font-semibold mb-4">Về Tễu Tạc</h4>
+<ul class="space-y-3">
+<li class=""><a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors hover:translate-x-1 inline-block duration-200" href="#about">Về chúng tôi</a></li>
+<li class=""><a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors hover:translate-x-1 inline-block duration-200" href="#news">Tin tức</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-secondary font-semibold mb-4">Khám phá</h4>
+<ul class="space-y-3">
+<li class=""><a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors hover:translate-x-1 inline-block duration-200" href="#products">Bộ sưu tập</a></li>
+<li class=""><a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors hover:translate-x-1 inline-block duration-200" href="#workshop">Workshop</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-secondary font-semibold mb-4">Hỗ trợ</h4>
+<ul class="space-y-3">
+<li class=""><a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors hover:translate-x-1 inline-block duration-200" href="#">Chính sách bảo mật</a></li>
+<li class=""><a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors hover:translate-x-1 inline-block duration-200" href="#">Điều khoản dịch vụ</a></li>
+<li class=""><a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors hover:translate-x-1 inline-block duration-200" href="#">Liên hệ</a></li>
+</ul>
+</div>
+</div>
+<div class="px-margin-desktop max-w-container-max mx-auto text-center font-body-md text-on-surface-variant/70 border-t border-secondary/10 pt-8">
+<p class="PDq2pG_selectionAnchorContainer"><strong>© 2026 Tễu Tạc. All rights reserved.</strong></p>
+</div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
