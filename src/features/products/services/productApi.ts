@@ -31,7 +31,7 @@ const PRODUCTS: Product[] = [
     name: "Tễu Original",
     description:
       "Phiên bản Chú Tễu nguyên bản, lấy cảm hứng từ nghệ thuật múa rối nước Việt Nam.",
-    price: 5800,
+    price: 580000,
     category: "original",
     imageUrl: teuOriginal1,
     images: [teuOriginal1, teuOriginal2, teuOriginal3, teuOriginal4],
@@ -44,7 +44,7 @@ const PRODUCTS: Product[] = [
       "Phiên bản thuộc bộ Tễu Trẩy Hội, lấy cảm hứng từ hình tượng Long trong Tứ Linh.",
     story:
       'Tễu Long không chỉ là một con rối, mà là hiện thân của sức mạnh và sự may mắn. Trong dân gian, Tễu thường mở màn các tích trò, mang lại tiếng cười phá bĩnh nhưng sâu sắc. Phiên bản "Long" khoác lên mình lớp áo hội, vảy rồng dát vàng mỏng, tượng trưng cho ước vọng mưa thuận gió hòa của nền văn minh lúa nước.',
-    price: 6850,
+    price: 685000,
     category: "tray-hoi",
     isNew: true,
     badges: ["Bán chạy", "Mô hình cao cấp"],
@@ -57,7 +57,7 @@ const PRODUCTS: Product[] = [
     name: "Tễu Lân",
     description:
       "Phiên bản thuộc bộ Tễu Trẩy Hội, lấy cảm hứng từ hình tượng Lân trong Tứ Linh.",
-    price: 6400,
+    price: 640000,
     category: "tray-hoi",
     imageUrl: teuLan1,
     images: [teuLan1, teuLan2, teuLan3, teuLan4],
@@ -68,7 +68,7 @@ const PRODUCTS: Product[] = [
     name: "Tễu Quy",
     description:
       "Phiên bản thuộc bộ Tễu Trẩy Hội, lấy cảm hứng từ hình tượng Quy trong Tứ Linh.",
-    price: 6400,
+    price: 640000,
     category: "tray-hoi",
     imageUrl: teuQuy1,
     images: [teuQuy1, teuQuy2, teuQuy3],
@@ -79,7 +79,7 @@ const PRODUCTS: Product[] = [
     name: "Tễu Phụng",
     description:
       "Phiên bản thuộc bộ Tễu Trẩy Hội, lấy cảm hứng từ hình tượng Phụng trong Tứ Linh.",
-    price: 6850,
+    price: 685000,
     category: "tray-hoi",
     imageUrl: teuPhung1,
     images: [teuPhung1, teuPhung2, teuPhung3],
