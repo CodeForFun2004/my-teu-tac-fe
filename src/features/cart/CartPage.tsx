@@ -1,6 +1,6 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Formik, Form } from "formik";
+import { Formik, Form, useFormikContext } from "formik";
 import * as Yup from "yup";
 import { useAppDispatch, useAppSelector } from "@/hooks/useRedux";
 import {
@@ -14,6 +14,7 @@ import FormInput from "@/components/forms/FormInput";
 import FormSelect from "@/components/forms/FormSelect";
 import FormCheckbox from "@/components/forms/FormCheckbox";
 import Icon from "@/components/common/Icon";
+import Toast from "@/components/common/Toast";
 import { formatCurrency } from "@/utils/formatCurrency";
 
 interface ShippingFormValues {
@@ -91,11 +92,28 @@ const validationSchema = Yup.object({
   ),
 });
 
+// Formik chặn onSubmit khi validation fail nên không thể phát hiện lỗi confirmInfo từ đó;
+// component này theo dõi submitCount để bắn toast mỗi khi người dùng bấm thanh toán mà chưa tick xác nhận.
+const ConfirmInfoToastWatcher = ({ onSubmitInvalid }: { onSubmitInvalid: () => void }) => {
+  const { errors, submitCount } = useFormikContext<ShippingFormValues>();
+  const lastSubmitCount = useRef(0);
+
+  useEffect(() => {
+    if (submitCount > lastSubmitCount.current && errors.confirmInfo) {
+      onSubmitInvalid();
+    }
+    lastSubmitCount.current = submitCount;
+  }, [submitCount, errors.confirmInfo, onSubmitInvalid]);
+
+  return null;
+};
+
 const CartPage = () => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
   const { items } = useAppSelector((state) => state.cart);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showConfirmToast, setShowConfirmToast] = useState(false);
 
   const subtotal = useMemo(
     () => items.reduce((total, item) => total + item.price * item.quantity, 0),
@@ -140,7 +158,10 @@ const CartPage = () => {
         initialValues={initialValues}
         validationSchema={validationSchema}
         onSubmit={async (values) => {
-          console.log("[CartPage] Bấm 'Thanh toán qua VietQR', shippingInfo:", values);
+          console.log(
+            "[CartPage] Bấm 'Thanh toán qua VietQR', shippingInfo:",
+            values,
+          );
           setIsSubmitting(true);
           try {
             const order = await dispatch(
@@ -169,7 +190,11 @@ const CartPage = () => {
           }
         }}
       >
-        <Form className="grid grid-cols-1 items-start gap-gutter lg:grid-cols-12">
+        <>
+          <ConfirmInfoToastWatcher
+            onSubmitInvalid={() => setShowConfirmToast(true)}
+          />
+          <Form className="grid grid-cols-1 items-start gap-gutter lg:grid-cols-12">
           <div className="flex flex-col gap-6 lg:col-span-8">
             {items.map((item) => (
               <div
@@ -368,7 +393,7 @@ const CartPage = () => {
             >
               {isSubmitting
                 ? "Đang tạo mã thanh toán..."
-                : "Thanh toán qua VietQR"}
+                : "Thanh toán qua MoMo"}
               <Icon name="arrow_forward" />
             </button>
 
@@ -402,8 +427,15 @@ const CartPage = () => {
               </div>
             </div>
           </div>
-        </Form>
+          </Form>
+        </>
       </Formik>
+
+      <Toast
+        open={showConfirmToast}
+        onClose={() => setShowConfirmToast(false)}
+        message="Vui lòng xác nhận thông tin giao hàng trước khi thanh toán."
+      />
     </div>
   );
 };

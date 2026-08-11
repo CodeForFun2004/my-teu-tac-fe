@@ -17,7 +17,7 @@ const HeroSection = () => {
 
       <div className="relative z-10 mx-auto mt-20 max-w-3xl px-gutter text-center">
         <h1 className="mb-6 font-display-lg text-display-lg text-secondary drop-shadow-lg">
-          Tự tay lắp Tễu – Chạm vào văn hóa múa rối nước Việt
+          Tạc Nét Xưa, Lắp Hình Mới
         </h1>
         <p className="mx-auto mb-10 max-w-2xl font-body-lg text-body-lg text-inverse-surface opacity-90">
           Tễu Tạc mang nghệ thuật múa rối nước đến gần hơn với thế hệ trẻ, kết

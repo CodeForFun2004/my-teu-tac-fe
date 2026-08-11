@@ -1,8 +1,8 @@
-import paradeMarionettesRow from "@/assets/images/gallery-parade-marionettes-row.jpg";
-import teuDrummer from "@/assets/images/gallery-teu-drummer.jpg";
-import paradeFlag from "@/assets/images/gallery-parade-flag.jpg";
-import workshopTable from "@/assets/images/news-workshop-table.jpg";
-import teuLong2 from "@/assets/images/Tễu Long (2).png";
+import moment0 from "@/assets/images/khoảnh khắc Tễu Tạc.jpg";
+import moment1 from "@/assets/images/khoảnh khắc Tễu Tạc (1).jpg";
+import moment2 from "@/assets/images/khoảnh khắc Tễu Tạc (2).jpg";
+import moment3 from "@/assets/images/khoảnh khắc Tễu Tạc (3).jpg";
+import moment4 from "@/assets/images/khoảnh khắc Tễu Tạc (4).jpg";
 
 const GallerySection = () => {
   return (
@@ -11,41 +11,41 @@ const GallerySection = () => {
       <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
         <div className="ghost-border group relative col-span-2 row-span-2 h-96 overflow-hidden rounded-lg bg-surface-container">
           <img
-            src={paradeMarionettesRow}
-            alt="Diễu hành rối truyền thống trong lễ hội văn hóa Việt Nam"
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            src={moment0}
+            alt="Khoảnh khắc Tễu Tạc"
+            className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-black/20 transition-all group-hover:bg-transparent" />
         </div>
         <div className="ghost-border group relative h-48 overflow-hidden rounded-lg bg-surface-container">
           <img
-            src={teuDrummer}
-            alt="Nghệ nhân biểu diễn rối Chú Tễu"
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            src={moment1}
+            alt="Khoảnh khắc Tễu Tạc 1"
+            className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-black/20 transition-all group-hover:bg-transparent" />
         </div>
         <div className="ghost-border group relative h-48 overflow-hidden rounded-lg bg-surface-container">
           <img
-            src={paradeFlag}
-            alt="Diễu hành rối cùng cờ Tổ quốc"
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            src={moment4}
+            alt="Khoảnh khắc Tễu Tạc 2"
+            className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-black/20 transition-all group-hover:bg-transparent" />
         </div>
         <div className="ghost-border group relative h-48 overflow-hidden rounded-lg bg-surface-container">
           <img
-            src={teuLong2}
-            alt="Chi tiết mô hình Tễu Long"
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            src={moment3}
+            alt="Khoảnh khắc Tễu Tạc 3"
+            className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-black/20 transition-all group-hover:bg-transparent" />
         </div>
         <div className="ghost-border group relative col-span-2 h-48 overflow-hidden rounded-lg bg-surface-container">
           <img
-            src={workshopTable}
-            alt="Không gian workshop lắp ráp thủ công"
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            src={moment2}
+            alt="Khoảnh khắc Tễu Tạc 4"
+            className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-black/20 transition-all group-hover:bg-transparent" />
         </div>

@@ -99,9 +99,13 @@ const ProductCard = ({ product, variant = "compact" }: ProductCardProps) => {
   return (
     <div className="ghost-border group overflow-hidden rounded-lg bg-surface-container-highest">
       <Link to={detailHref} className="block">
-        <div className="relative h-64 bg-surface-container">
+        <div className="relative h-64 bg-surface-container p-4">
           {product.imageUrl ? (
-            <img src={product.imageUrl} alt={product.name} className="h-full w-full object-cover" />
+            <img
+              src={product.imageUrl}
+              alt={product.name}
+              className="h-full w-full object-contain"
+            />
           ) : null}
           <div className="absolute inset-0 z-10 bg-secondary/10 transition-colors group-hover:bg-transparent" />
         </div>

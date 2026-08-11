@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Icon from "@/components/common/Icon";
 import { useAppSelector } from "@/hooks/useRedux";
+import logo from "@/assets/images/Logo.png";
 
 const PRODUCT_CATEGORIES = [
   "Tễu Original",
@@ -66,11 +67,11 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-secondary/30 bg-[#002114] shadow-sm">
       <div className="mx-auto flex h-20 max-w-container-max items-center justify-between px-gutter md:px-margin-desktop">
-        <Link
-          to="/"
-          className="font-headline-sm text-headline-sm text-secondary"
-        >
-          Tễu Tạc
+        <Link to="/" className="flex items-center gap-3">
+          <img src={logo} alt="Tễu Tạc" className="h-12 w-auto md:h-14" />
+          <span className="font-headline-sm text-headline-sm text-secondary">
+            Tễu Tạc
+          </span>
         </Link>
 
         <div className="hidden items-center gap-2 md:flex">

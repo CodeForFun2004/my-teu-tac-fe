@@ -16,31 +16,38 @@ const NEWS_ITEMS: NewsItem[] = [
   {
     category: "Workshop",
     title: "Workshop Lắp Ráp Tễu Cuối Tuần",
-    description: "Cùng gia đình tận hưởng cuối tuần sáng tạo với mô hình Tễu Tạc.",
+    description:
+      "Cùng gia đình tận hưởng cuối tuần sáng tạo với mô hình Tễu Tạc.",
     date: "15/10/2026",
-    location: "Tễu Tạc Studio, Hà Nội",
+    location: "Tễu Tạc Studio, Đà Nẵng",
     image: workshopImage,
   },
   {
     category: "Sự kiện",
     title: "Tễu Tạc tại Hội Chợ Thủ Công Mỹ Nghệ",
-    description: "Gặp gỡ và trải nghiệm các sản phẩm mới nhất của Tễu Tạc tại sự kiện thường niên.",
+    description:
+      "Gặp gỡ và trải nghiệm các sản phẩm mới nhất của Tễu Tạc tại sự kiện thường niên.",
     date: "20/10 - 22/10/2026",
-    location: "Cung Triển Lãm Kiến Trúc, Hà Nội",
+    location: "Cung Triển Lãm Kiến Trúc, Đà Nẵng",
     image: fairImage,
   },
   {
     category: "Sản phẩm mới",
     title: "Ra mắt Bộ Sưu Tập Tễu Trẩy Hội",
-    description: "Khám phá ý nghĩa văn hóa đằng sau bộ sưu tập Long - Lân - Quy - Phụng.",
+    description:
+      "Khám phá ý nghĩa văn hóa đằng sau bộ sưu tập Long - Lân - Quy - Phụng.",
     date: "01/11/2026",
+    location: "Tễu Tạc Studio, Đà Nẵng",
     image: collectionImage,
   },
 ];
 
 const NewsSection = () => {
   return (
-    <section id="news" className="bg-surface-container-low px-gutter py-section-gap md:px-margin-desktop">
+    <section
+      id="news"
+      className="bg-surface-container-low px-gutter py-section-gap md:px-margin-desktop"
+    >
       <div className="mx-auto max-w-container-max">
         <h2 className="mb-12 text-center font-headline-lg text-headline-lg text-secondary">
           Tin tức & Workshop sắp tới
@@ -65,7 +72,9 @@ const NewsSection = () => {
                 <h3 className="mb-3 font-headline-sm text-[20px] text-on-background transition-colors group-hover:text-secondary">
                   {item.title}
                 </h3>
-                <p className="mb-4 font-body-md text-sm text-on-surface-variant">{item.description}</p>
+                <p className="mb-4 font-body-md text-sm text-on-surface-variant">
+                  {item.description}
+                </p>
                 <div className="mt-auto flex flex-col gap-1 text-sm text-on-surface-variant/70">
                   <span className="flex items-center gap-2">
                     <Icon name="calendar_month" className="text-[16px]" />

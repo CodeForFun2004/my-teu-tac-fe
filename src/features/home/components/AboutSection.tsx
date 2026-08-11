@@ -10,9 +10,7 @@ const FEATURES = [
   { icon: "redeem", title: "Trưng bày & sưu tầm" },
 ];
 
-// TODO: điền YouTube video ID thật của Tễu Tạc (đoạn cuối URL youtube.com/watch?v=<ID>).
-// Để trống thì khung ảnh hiển thị bình thường, không có nút play.
-const ABOUT_VIDEO_ID = "8D3GBcKdnOY";
+const ABOUT_VIDEO_ID = "_jMsW14KDm4";
 
 const AboutSection = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
