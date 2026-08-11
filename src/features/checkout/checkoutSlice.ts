@@ -38,7 +38,8 @@ const checkoutSlice = createSlice({
         state.status = "succeeded";
         state.currentOrder = action.payload;
       })
-      .addCase(createOrder.rejected, (state) => {
+      .addCase(createOrder.rejected, (state, action) => {
+        console.error("[checkoutSlice] createOrder rejected:", action.error);
         state.status = "failed";
       })
       .addCase(fetchOrder.pending, (state) => {

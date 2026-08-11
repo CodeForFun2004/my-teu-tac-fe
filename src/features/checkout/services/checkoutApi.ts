@@ -2,7 +2,15 @@ import axiosClient from "@/config/axiosClient";
 import type { CreateOrderPayload, OrderStatus, PaymentOrder } from "@/features/checkout/types/checkout.types";
 
 export const createOrder = async (payload: CreateOrderPayload): Promise<PaymentOrder> => {
-  return axiosClient.post<PaymentOrder>("/orders", payload);
+  console.log("[checkoutApi] createOrder payload:", payload);
+  try {
+    const order = await axiosClient.post<PaymentOrder>("/orders", payload);
+    console.log("[checkoutApi] createOrder success:", order);
+    return order;
+  } catch (error) {
+    console.error("[checkoutApi] createOrder failed:", error);
+    throw error;
+  }
 };
 
 export const getOrder = async (orderId: string): Promise<PaymentOrder> => {

@@ -140,20 +140,33 @@ const CartPage = () => {
         initialValues={initialValues}
         validationSchema={validationSchema}
         onSubmit={async (values) => {
+          console.log("[CartPage] Bấm 'Thanh toán qua VietQR', shippingInfo:", values);
           setIsSubmitting(true);
-          const order = await dispatch(
-            createOrder({
-              shippingInfo: values,
-              items: items.map((item) => ({
-                productId: item.productId,
-                name: item.name,
-                price: item.price,
-                quantity: item.quantity,
-              })),
-            }),
-          ).unwrap();
-          dispatch(clearCart());
-          navigate(`/checkout/${order.orderId}`);
+          try {
+            const order = await dispatch(
+              createOrder({
+                shippingInfo: values,
+                items: items.map((item) => ({
+                  productId: item.productId,
+                  name: item.name,
+                  price: item.price,
+                  quantity: item.quantity,
+                })),
+              }),
+            ).unwrap();
+            console.log("[CartPage] Tạo đơn hàng thành công:", order);
+            dispatch(clearCart());
+            navigate(`/checkout/${order.orderId}`);
+          } catch (error) {
+            console.error("[CartPage] Tạo đơn hàng thất bại:", error);
+            alert(
+              error instanceof Error
+                ? error.message
+                : "Không thể tạo đơn hàng. Vui lòng thử lại.",
+            );
+          } finally {
+            setIsSubmitting(false);
+          }
         }}
       >
         <Form className="grid grid-cols-1 items-start gap-gutter lg:grid-cols-12">
