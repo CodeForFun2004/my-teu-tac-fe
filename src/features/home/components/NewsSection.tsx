@@ -18,7 +18,7 @@ const NEWS_ITEMS: NewsItem[] = [
     title: "Workshop Lắp Ráp Tễu Cuối Tuần",
     description:
       "Cùng gia đình tận hưởng cuối tuần sáng tạo với mô hình Tễu Tạc.",
-    date: "15/10/2026",
+    date: "15/08/2026",
     location: "Tễu Tạc Studio, Đà Nẵng",
     image: workshopImage,
   },
@@ -27,7 +27,7 @@ const NEWS_ITEMS: NewsItem[] = [
     title: "Tễu Tạc tại Hội Chợ Thủ Công Mỹ Nghệ",
     description:
       "Gặp gỡ và trải nghiệm các sản phẩm mới nhất của Tễu Tạc tại sự kiện thường niên.",
-    date: "20/10 - 22/10/2026",
+    date: "20/08 - 22/08/2026",
     location: "Cung Triển Lãm Kiến Trúc, Đà Nẵng",
     image: fairImage,
   },

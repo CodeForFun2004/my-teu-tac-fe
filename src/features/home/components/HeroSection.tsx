@@ -16,7 +16,7 @@ const HeroSection = () => {
       </div>
 
       <div className="relative z-10 mx-auto mt-20 max-w-3xl px-gutter text-center">
-        <h1 className="mb-6 font-display-lg text-display-lg text-secondary drop-shadow-lg">
+        <h1 className="mb-6 -translate-y-80 font-display-lg text-display-lg text-secondary drop-shadow-lg md:-translate-y-60">
           Tạc Nét Xưa, Lắp Hình Mới
         </h1>
         <p className="mx-auto mb-10 max-w-2xl font-body-lg text-body-lg text-inverse-surface opacity-90">

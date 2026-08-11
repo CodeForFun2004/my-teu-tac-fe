@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Icon from "@/components/common/Icon";
 import YouTubeModal from "@/components/common/YouTubeModal";
-import aboutImage from "@/assets/images/gallery-parade-marionette-woman.jpg";
+import aboutImage from "@/assets/images/Preview.png";
 
 const FEATURES = [
   { icon: "account_balance", title: "Văn hóa múa rối nước" },

@@ -18,10 +18,12 @@ import teuLan4 from "@/assets/images/Tễu Lân (4).png";
 import teuQuy1 from "@/assets/images/Tễu Quy (1).png";
 import teuQuy2 from "@/assets/images/Tễu Quy (2).png";
 import teuQuy3 from "@/assets/images/Tễu Quy (3).png";
+import teuQuy4 from "@/assets/images/Tễu Quy (4).png";
 
 import teuPhung1 from "@/assets/images/Tễu Phụng (1).png";
 import teuPhung2 from "@/assets/images/Tễu Phụng (2).png";
 import teuPhung3 from "@/assets/images/Tễu Phụng (3).png";
+import teuPhung4 from "@/assets/images/Tễu Phụng (4).png";
 
 // Mock data — shape mirrors the future API response so swapping to axiosClient later is a one-file change.
 const PRODUCTS: Product[] = [
@@ -71,7 +73,7 @@ const PRODUCTS: Product[] = [
     price: 640000,
     category: "tray-hoi",
     imageUrl: teuQuy1,
-    images: [teuQuy1, teuQuy2, teuQuy3],
+    images: [teuQuy1, teuQuy2, teuQuy3, teuQuy4],
   },
   {
     id: "5",
@@ -82,7 +84,7 @@ const PRODUCTS: Product[] = [
     price: 685000,
     category: "tray-hoi",
     imageUrl: teuPhung1,
-    images: [teuPhung1, teuPhung2, teuPhung3],
+    images: [teuPhung1, teuPhung2, teuPhung3, teuPhung4],
   },
 ];
 

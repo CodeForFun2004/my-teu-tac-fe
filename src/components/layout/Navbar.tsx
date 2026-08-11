@@ -21,7 +21,11 @@ interface NavLinksProps {
 
 const NavLinks = ({ onNavigate }: NavLinksProps) => (
   <>
-    <Link to={{ pathname: "/", hash: "about" }} className={navLinkClass} onClick={onNavigate}>
+    <Link
+      to={{ pathname: "/", hash: "about" }}
+      className={navLinkClass}
+      onClick={onNavigate}
+    >
       Giới thiệu
     </Link>
 
@@ -49,10 +53,18 @@ const NavLinks = ({ onNavigate }: NavLinksProps) => (
       </div>
     </div>
 
-    <Link to={{ pathname: "/", hash: "workshop" }} className={navLinkClass} onClick={onNavigate}>
+    <Link
+      to={{ pathname: "/", hash: "workshop" }}
+      className={navLinkClass}
+      onClick={onNavigate}
+    >
       Workshop
     </Link>
-    <Link to={{ pathname: "/", hash: "news" }} className={navLinkClass} onClick={onNavigate}>
+    <Link
+      to={{ pathname: "/", hash: "news" }}
+      className={navLinkClass}
+      onClick={onNavigate}
+    >
       Tin tức
     </Link>
   </>
@@ -68,10 +80,10 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50 w-full border-b border-secondary/30 bg-[#002114] shadow-sm">
       <div className="mx-auto flex h-20 max-w-container-max items-center justify-between px-gutter md:px-margin-desktop">
         <Link to="/" className="flex items-center gap-3">
-          <img src={logo} alt="Tễu Tạc" className="h-12 w-auto md:h-14" />
-          <span className="font-headline-sm text-headline-sm text-secondary">
+          <img src={logo} alt="Tễu Tạc" className="h-20 w-auto md:h-22" />
+          {/* <span className="font-headline-sm text-headline-sm text-secondary">
             Tễu Tạc
-          </span>
+          </span> */}
         </Link>
 
         <div className="hidden items-center gap-2 md:flex">

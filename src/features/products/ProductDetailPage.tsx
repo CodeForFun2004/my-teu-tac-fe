@@ -51,6 +51,7 @@ const ProductDetailPage = () => {
   const { items, status } = useAppSelector((state) => state.products);
   const [quantity, setQuantity] = useState(1);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [lastSlug, setLastSlug] = useState(slug);
 
   useEffect(() => {
     if (status === "idle") {
@@ -58,15 +59,18 @@ const ProductDetailPage = () => {
     }
   }, [dispatch, status]);
 
+  // Đổi sản phẩm (điều hướng qua "Cùng bộ sưu tập") thì quay lại ảnh đầu tiên thay vì giữ index cũ.
+  // Reset trực tiếp trong render (thay vì trong effect) theo khuyến nghị của React cho việc
+  // "adjusting state when a prop changes" — tránh cascading render mà eslint react-hooks cảnh báo.
+  if (slug !== lastSlug) {
+    setLastSlug(slug);
+    setSelectedImageIndex(0);
+  }
+
   const product = items.find((item) => item.slug === slug);
   const relatedProducts = product
     ? items.filter((item) => item.category === product.category && item.id !== product.id).slice(0, 4)
     : [];
-
-  // Đổi sản phẩm (điều hướng qua "Cùng bộ sưu tập") thì quay lại ảnh đầu tiên thay vì giữ index cũ.
-  useEffect(() => {
-    setSelectedImageIndex(0);
-  }, [slug]);
 
   const gallery = product?.images && product.images.length > 0 ? product.images : product?.imageUrl ? [product.imageUrl] : [];
   const activeImage = gallery[selectedImageIndex] ?? gallery[0];
