@@ -14,4 +14,6 @@ export interface Product {
   category: ProductCategory;
   isNew?: boolean;
   badges?: string[];
+  /** QR code image for the product, used in the product detail page. */
+  qrCodeUrl?: string;
 }
