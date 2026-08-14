@@ -53,7 +53,7 @@ const PRODUCTS: Product[] = [
     slug: "teu-long",
     name: "Tễu Long",
     description:
-      "Phiên bản thuộc bộ Tễu Trẩy Hội, lấy cảm hứng từ hình tượng Long trong Tứ Linh.",
+      "Lấy cảm hứng từ hình tượng Long trong văn hóa Việt Nam, Tễu Long tượng trưng cho sức mạnh, may mắn và sự phát triển.",
     story:
       'Tễu Long không chỉ là một con rối, mà là hiện thân của sức mạnh và sự may mắn. Trong dân gian, Tễu thường mở màn các tích trò, mang lại tiếng cười phá bĩnh nhưng sâu sắc. Phiên bản "Long" khoác lên mình lớp áo hội, vảy rồng dát vàng mỏng, tượng trưng cho ước vọng mưa thuận gió hòa của nền văn minh lúa nước.',
     price: 685000,
